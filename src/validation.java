@@ -1,8 +1,5 @@
 public class validation{
 
-  public int x = 7;
-
-
 
 
   public boolean userValidStart(String input){
@@ -22,11 +19,11 @@ public class validation{
 
 
 
-  public boolean userValidMenu(String input){
-    for(int count = 0; count < input.length();count++){
-      if (Character.isDigit(input.charAt(count))){
+  public boolean userValidMenu(String input, int x){
+    if(input.length() == 1){
+      if (Character.isDigit(input.charAt(0))){
         int num = Integer.parseInt(input);
-        if (num < x && num > 0){
+        if (num <= x && num > 0){
             return true;
           }else{
         System.out.println("Can you just enter some in-bound numbers?");
@@ -38,6 +35,11 @@ public class validation{
     return false;
   }
 
-  //public boolean checkForBlanks(String[][], int x1,int x2,int y1,int y2){
-    //if
+  public boolean checkForBlanks(String[][] grid, int x, int y){
+    if (grid[x-1][y-1] == " "){
+    	System.out.println("The box is gone!");
+    	return false;
+    }
+    return true;
   }
+}

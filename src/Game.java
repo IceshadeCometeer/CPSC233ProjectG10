@@ -1,11 +1,14 @@
 
 public class Game {
-
+	
 	public static void main (String [] args){
-		System.out.println("zeby");
-		PlayGame game = new PlayGame();
-		game.initBoard();
-		System.out.println("zeby tany");
+		//BoardGenerator game = new BoardGenerator(2);
+		//String[][] random = game.createRandom();
+		//game.printGrid(random);
+		
+		
+		//PlayGame game = new PlayGame();
+		//game.initBoard();
 	}
 
 }
